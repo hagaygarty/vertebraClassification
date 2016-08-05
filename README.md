@@ -23,6 +23,10 @@ spineDataset=load('spine.mat');
 load('net.mat');
 checkNetwork(net,Inf,spineDataset.images,1);
 
+For 78.0% run:
+load('net_maxS.mat');
+checkNetwork(net_maxS,Inf,spineDataset.images,1);
+
 wait for several minutes, the results will show
 
 
