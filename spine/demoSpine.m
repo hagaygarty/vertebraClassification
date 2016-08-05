@@ -1,5 +1,5 @@
-% this demo will get MNIST data automatically and start a training on network specified in 'mnist.conf'
-% it will reach 94% in several minutes, 99.2% in couple of hours
+% this demo will get train one the spine dataset. Trainning takes about 5 days to finish, you will be able to see the progress due
+% successRate will start from ~9% and reach 78.08%
 
 addpath('../../Trainning' , '../../mdCNN' );
 
@@ -7,7 +7,7 @@ net = CreateNet('../../Configs/spine.conf');
 
 spineDataset=load('spine.mat');
 
-% start training, will train for 15k images. Reach about 96.30% in several minutes. 
-% In order to reach 99.2% remove the last parameter (15k) and let it train longer.
-% It will stop trainning automatically (once ni reach below thresh)
+% start training, will train until ni is too small (below thresh specified in spine.conf)
 net   =  Train(spineDataset.images,net);
+
+checkNetwork(net,Inf,spineDataset.images,1);
