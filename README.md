@@ -27,6 +27,7 @@ spineDataset=load('spine.mat');
 load('net.mat');
 
 checkNetwork(net,Inf,spineDataset.images,1);
+
 =~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~
 
 For 78.0% classification net run:
