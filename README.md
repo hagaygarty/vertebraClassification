@@ -19,12 +19,17 @@ You can use net.mat as the main network.
 To run the network on the test dataset set matlab folder to 'spine' then run:
 
 addpath('../../Trainning' , '../../mdCNN', '../../utilCode');
+
 spineDataset=load('spine.mat'); 
+
 load('net.mat');
+
 checkNetwork(net,Inf,spineDataset.images,1);
 
-For 78.0% run:
+For 78.0% classification net run:
+
 load('net_maxS.mat');
+
 checkNetwork(net_maxS,Inf,spineDataset.images,1);
 
 wait for several minutes, the results will show
