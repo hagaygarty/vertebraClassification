@@ -16,6 +16,7 @@ Then call 'demoSpine.m' , the trainning process will begin. You can see the 'sce
 In order to classify using the pretrained network - unzip the 'Nets.7z' files, please the networks in the 'spine' folder.
 You can use net.mat as the main network.
 
+=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~
 To run the network on the test dataset set matlab folder to 'spine' then run:
 
 addpath('../../Trainning' , '../../mdCNN', '../../utilCode');
@@ -25,6 +26,7 @@ spineDataset=load('spine.mat');
 load('net.mat');
 
 checkNetwork(net,Inf,spineDataset.images,1);
+=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~
 
 For 78.0% classification net run:
 
