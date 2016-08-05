@@ -9,15 +9,16 @@ In order to train first download mdCNN from:
 https://github.com/hagaygarty/mdCNN
 
 Then put the 'spine' folder inside mdCNN demo folder.
-Unzip the Dataset files , place 'spine.mat' inside 'spine' folder.
-Then call 'demoSpine.m' , the trainning process will begin. You can see the 'scesRate=' strarting from 9.59 % and rising.
 
+Unzip the Dataset file (spine.7z) , place 'spine.mat' inside 'spine' folder. This is the main dataset file. It contains images for testing and trainning.
 
-In order to classify using the pretrained network - unzip the 'Nets.7z' files, please the networks in the 'spine' folder.
-You can use net.mat as the main network.
+Then call 'demoSpine.m' , the trainning process will begin. You will see the 'successRate=' field strarting from 9.59 % and rising.
 
 =~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~
-To run the network on the test dataset set matlab folder to 'spine' then run:
+
+In order to classify using the pretrained network first unzip the 'spine.7z' file , then 'Nets.7z'. pleace both files under 'spine' folder.
+
+set matlab folder to 'spine' then run:
 
 addpath('../../Trainning' , '../../mdCNN', '../../utilCode');
 
