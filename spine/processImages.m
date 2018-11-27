@@ -35,8 +35,13 @@ for scan=1:length(scans)
     
     
    % spacing = spacing ./ finalSpacing;
+    miccaiFolderName='miccai2013';
+    centFolder = fullfile(folder,miccaiFolderName);
+    if ~(isdir(centFolder))
+        display(['Please place ' miccaiFolderName ' folder inside ' folder ' to continue']);
+       return;
+    end
     
-    centFolder='c:\Users\hagayg\Desktop\miccai2013\results\';
     centFile =  fullfile(centFolder,[scanFolder  '_centroids_conf.lml']);
     if (~exist(centFile,'file'))
         centFile = lmlFile;
